@@ -138,60 +138,60 @@ To determine the effect of temporal variation in climate on \textit{O. coloraden
 \begin{spacing}{1.2}
 \centering
 %\resizebox{\textwidth}{!}{ 
-\begin{longtable}{p{0.035\textwidth}|p{0.02\textwidth} p{0.02\textwidth}|p{0.02\textwidth}| p{0.018\textwidth} p{0.018\textwidth} | p{0.018\textwidth} p{0.018\textwidth} p{0.018\textwidth} p{0.018\textwidth} p{0.018\textwidth} p{0.018\textwidth} 
-|p{0.02\textwidth}|p{0.02\textwidth} p{0.02\textwidth}|p{0.02\textwidth}|p{0.02\textwidth}|p{0.02\textwidth}|p{0.058\textwidth}|p{0.045\textwidth}}   
-\caption{A description of the data used to create each IPM, as well as the covariates included in the vital rate models used in that IPM. ln($\lambda$) estimates and 95\% bootstrap confidence intervals of ln($\lambda$) are also shown for each IPM. ln($\lambda$) is not given for IPMs that were constructed with random effects or continuous environmental covariates, since those models were implemented stochastically. For those models, stochastic population growth rate (ln($\lambda_s$)) is given instead. \label{IPMsTable}} \\
+\begin{longtable}{|p{0.028\textwidth}|p{0.02\textwidth} p{0.02\textwidth}|p{0.02\textwidth}| p{0.018\textwidth} p{0.018\textwidth} | p{0.018\textwidth} p{0.018\textwidth} p{0.018\textwidth} p{0.018\textwidth} p{0.018\textwidth} p{0.018\textwidth} 
+|p{0.02\textwidth}|p{0.02\textwidth} p{0.02\textwidth}|p{0.04\textwidth}|p{0.04\textwidth}|p{2.55cm}|}   
+\caption{A description of the data used to create each IPM, as well as the covariates included in the vital rate models used in that IPM. ln($\lambda$) estimates and 95\% bootstrap confidence intervals of ln($\lambda$) are also shown for each IPM.\label{IPMsTable}} \\
 %\hline \\[-1.6ex] 
 \toprule
 \rotatebox{90}{IPM} & 
 \multicolumn{11}{c}{Data Included} & 
 \multicolumn{3}{|c}{Transition} & 
-\multicolumn{3}{|c|}{Covariates} & 
-\footnotesize ln($\lambda$) (95\% CI) & 
-\footnotesize ln($\lambda_s$) \\ \cline{2-18}
-& & & & \multicolumn{2}{|p{0.05\textwidth}|}{Each pop.} & \multicolumn{6}{c|}{Each subpop.} & & & & & & & &  \\\cline{5-12}
-& \rotatebox{90}{Continuous state only} & \rotatebox{90}{Continuous + seedbank state} & \rotatebox{90}{All subpopulations} & \rotatebox{90}{Soapstone} & \rotatebox{90}{FEWAFB} & \rotatebox{90}{Unnamed Creek} & \rotatebox{90}{Diamond Creek} & \rotatebox{90}{Crow Creek} & \rotatebox{90}{Meadow} & \rotatebox{90}{HQ3} & \rotatebox{90}{HQ5} & \rotatebox{90}{All Transitions} & \rotatebox{90}{2018-2019} & \rotatebox{90}{2019-2020} & \rotatebox{90}{Density dependence} & \rotatebox{90}{Environmental covariates} & \rotatebox{90}{Subpopulation random intercept} & & \\
+\multicolumn{2}{|c|}{Covariates} & 
+\small ln($\lambda$) \hspace{2em} \footnotesize (95\% CI) 
+\\ \cline{2-18}
+& & & & \multicolumn{2}{|p{0.05\textwidth}|}{Each pop.} & \multicolumn{6}{c|}{Each subpop.} & & & & & &  \\\cline{5-12}
+& \rotatebox{90}{Continuous state only} & \rotatebox{90}{Continuous + seedbank state} & \rotatebox{90}{All subpopulations} & \rotatebox{90}{Soapstone} & \rotatebox{90}{FEWAFB} & \rotatebox{90}{Unnamed Creek} & \rotatebox{90}{Diamond Creek} & \rotatebox{90}{Crow Creek} & \rotatebox{90}{Meadow} & \rotatebox{90}{HQ3} & \rotatebox{90}{HQ5} & \rotatebox{90}{All Transitions} & \rotatebox{90}{2018-2019} & \rotatebox{90}{2019-2020} & \rotatebox{90}{Density dependence} & \rotatebox{90}{Environmental covariates} &  \\
 \hline
-\rowcolor[gray]{.95} A&\textsf{x}&&\textsf{x}&&&&&&&&&\textsf{x}&&&&&&0.41 \tiny (0.408, 0.411) & \small n/a \\
-B &&\textsf{x}&\textsf{x}&&&&&&&&&\textsf{x}&&&&&&0.39 \tiny (0.393, 0.395)&\small n/a   \\
-\rowcolor[gray]{.95}C&&\textsf{x}&&&&\textsf{x}&&&&&&\textsf{x}&&&&&&0.24 \tiny  (0.241, 0.244)& \small n/a\\
-D &&\textsf{x}&&&&&\textsf{x}&&&&&\textsf{x}&&&&&&0.81 \tiny  (0.814, 0.819) & \small n/a \\
-\rowcolor[gray]{.95} E &&\textsf{x}&&&&&&\textsf{x}&&&&\textsf{x}&&&&&&0.46 \tiny  (0.462, 0.468) & \small n/a\\
-F &&\textsf{x}&&&&&&&\textsf{x}&&&\textsf{x}&&&&&&0.31 \tiny  (0.306, 0.310) & \small n/a \\
-\rowcolor[gray]{.95} G &&\textsf{x}&&&&&&&&\textsf{x}&&\textsf{x}&&&&&&0.19 \tiny (0.184, 0.189) & \small n/a \\
-H &&\textsf{x}&&&&&&&&&\textsf{x}&\textsf{x}&&&&&&0.29 \tiny (0.291, 0.295) & \small n/a \\
-\rowcolor[gray]{.95} I &&\textsf{x}&&&&\textsf{x}&&&&&&\textsf{x}&&&\textsf{x}&&&0.33 \tiny (0.311, 0.334) & \small n/a \\
-J &&\textsf{x}&&&&&\textsf{x}&&&&&\textsf{x}&&&\textsf{x}&&&0.55 \tiny (0.530, 0.565) & \small n/a \\
-\rowcolor[gray]{.95} K &&\textsf{x}&&&&&&\textsf{x}&&&&\textsf{x}&&&\textsf{x}&&&0.70 \tiny (0.678, 0.721) & \small n/a \\
-L &&\textsf{x}&&&&&&&\textsf{x}&&&\textsf{x}&&&\textsf{x}&&&0.23 \tiny (0.210, 0.230) & \small n/a \\
-\rowcolor[gray]{.95} M &&\textsf{x}&&&&&&&&\textsf{x}&&\textsf{x}&&&\textsf{x}&&&$-0.18$ \tiny ($-0.16$, $-0.20$) & \small n/a \\
-N &&\textsf{x}&&&&&&&&&\textsf{x}&\textsf{x}&&&\textsf{x}&&&0.31 \tiny (0.309, 0.313) & \small n/a \\
+\rowcolor[gray]{.95} A&\textsf{x}&&\textsf{x}&&&&&&&&&\textsf{x}&&&&&0.27 \hspace{2em} \footnotesize (0.269, 0.271)  \\
+B &&\textsf{x}&\textsf{x}&&&&&&&&&\textsf{x}&&&&&0.65 \hspace{2em} \footnotesize (0.648, 0.650)   \\
+\rowcolor[gray]{.95}C&&\textsf{x}&&&&\textsf{x}&&&&&&\textsf{x}&&&&&0.48 \hspace{2em} \footnotesize  (0.477, 0.489) \\
+D &&\textsf{x}&&&&&\textsf{x}&&&&&\textsf{x}&&&&& 1.13 \hspace{2em} \footnotesize  (1.124, 1.142)  \\
+\rowcolor[gray]{.95} E &&\textsf{x}&&&&&&\textsf{x}&&&&\textsf{x}&&&&&0.74 \hspace{2em} \footnotesize  (0.725, 0.746) \\
+F &&\textsf{x}&&&&&&&\textsf{x}&&&\textsf{x}&&&&&0.54 \hspace{2em} \footnotesize  (0.520, 0.551)  \\
+\rowcolor[gray]{.95} G &&\textsf{x}&&&&&&&&\textsf{x}&&\textsf{x}&&&&&0.395 \hspace{2em} \footnotesize (0.378, 0.401)  \\
+H &&\textsf{x}&&&&&&&&&\textsf{x}&\textsf{x}&&&&&0.53 \hspace{2em} \footnotesize (0.526, 0.540)  \\
+\rowcolor[gray]{.95} I &&\textsf{x}&&&&\textsf{x}&&&&&&\textsf{x}&&&\textsf{x}&&0.59 \hspace{2em} \footnotesize (0.576, 0.637)  \\
+J &&\textsf{x}&&&&&\textsf{x}&&&&&\textsf{x}&&&\textsf{x}&&0.63 \hspace{2em} \footnotesize (0.611, 0.723)  \\
+\rowcolor[gray]{.95} K &&\textsf{x}&&&&&&\textsf{x}&&&&\textsf{x}&&&\textsf{x}&& $-0.10$ \hspace{2em} \footnotesize ($-0.135$, 0.063)  \\
+L &&\textsf{x}&&&&&&&\textsf{x}&&&\textsf{x}&&&\textsf{x}&&$-0.20$ \hspace{2em} \footnotesize ($-0.229$, $-0.167$)  \\
+\rowcolor[gray]{.95} M &&\textsf{x}&&&&&&&&\textsf{x}&&\textsf{x}&&&\textsf{x}&&1.31 \hspace{2em} \footnotesize (1.294, 1.354)  \\
+N &&\textsf{x}&&&&&&&&&\textsf{x}&\textsf{x}&&&\textsf{x}&&2.31 \hspace{2em} \footnotesize (2.297, 2.33)  \\
 %\rowcolor[gray]{.95} O &&\textsf{x}&&\textsf{x}&&&&&&&&\textsf{x}&&&\textsf{x}&\textsf{x}&\textsf{x}& n/a& 0.04 \\
-%P \tiny hot/ dry &&\textsf{x}&&\textsf{x}&&&&&&&&\textsf{x}&&&\textsf{x}&\textsf{x}&\textsf{x}& n/a& 0.02\\
+%P \footnotesize hot/ dry &&\textsf{x}&&\textsf{x}&&&&&&&&\textsf{x}&&&\textsf{x}&\textsf{x}&\textsf{x}& n/a& 0.02\\
 %\rowcolor[gray]{.95} Q &&\textsf{x}&&&\textsf{x}&&&&&&&\textsf{x}&&&\textsf{x}&\textsf{x}&\textsf{x}& n/a& 0.07 \\ 
-%R \tiny hot/ dry &&\textsf{x}&&&\textsf{x}&&&&&&&\textsf{x}&&&\textsf{x}&\textsf{x}&\textsf{x}& n/a& 0.07 \\
-\rowcolor[gray]{.95} S &&\textsf{x}&&&&\textsf{x}&&&&&&\textsf{x}&&&\textsf{x}&\textsf{x}&&0.33\footnotesize*&n/a \\
-T &&\textsf{x}&&&&&\textsf{x}&&&&&\textsf{x}&&&\textsf{x}&\textsf{x}&&0.39\footnotesize*&n/a \\
-\rowcolor[gray]{.95} U &&\textsf{x}&&&&&&\textsf{x}&&&&\textsf{x}&&&\textsf{x}&\textsf{x}&&0.61\footnotesize*&n/a \\
-V &&\textsf{x}&&&&&&&\textsf{x}&&&\textsf{x}&&&\textsf{x}&\textsf{x}&&$-0.27$\footnotesize*&n/a \\
-\rowcolor[gray]{.95} W &&\textsf{x}&&&&&&&&\textsf{x}&&\textsf{x}&&&\textsf{x}&\textsf{x}&&$-0.21$\footnotesize*&n/a \\
-X &&\textsf{x}&&&&&&&&&\textsf{x}&\textsf{x}&&&\textsf{x}&\textsf{x}&&0.50\footnotesize*&n/a \\
-\rowcolor[gray]{.95} AA &&\textsf{x}&&\textsf{x}&&&&&&&&\textsf{x}&&&&&&0.31 \tiny (0.309, 0.313) & \small n/a \\
-BB &&\textsf{x}&&&\textsf{x}&&&&&&&\textsf{x}&&&&&&0.458 \tiny (0.457, 0.459) & \small n/a \\
-\rowcolor[gray]{.95} CC &&\textsf{x}&&&&\textsf{x}&&&&&&&\textsf{x}&&&&&0.20 \tiny (0.190, 0.207) & \small n/a \\
-DD &&\textsf{x}&&&&&\textsf{x}&&&&&&\textsf{x}&&&&&1.29 \tiny (1.279, 1.300) & \small n/a  \\
-\rowcolor[gray]{.95} EE &&\textsf{x}&&&&&&\textsf{x}&&&&&\textsf{x}&&&&&0.68 \tiny (0.660, 0.697) & \small n/a \\
-FF &&\textsf{x}&&&&&&&\textsf{x}&&&&\textsf{x}&&&&&0.41 \tiny (0.387, 0.427) & \small n/a  \\
-\rowcolor[gray]{.95} GG &&\textsf{x}&&&&&&&&\textsf{x}&&&\textsf{x}&&&&&0.56 \tiny (0.549, 0.569) & \small n/a \\
-HH &&\textsf{x}&&&&&&&&&\textsf{x}&&\textsf{x}&&&&&0.89 \tiny (0.884, 0.899) & \small n/a \\
-\rowcolor[gray]{.95} II &&\textsf{x}&&&&\textsf{x}&&&&&&&&\textsf{x}&&&&0.29 \tiny (0.285, 0.302) & \small n/a \\
-JJ &&\textsf{x}&&&&&\textsf{x}&&&&&&&\textsf{x}&&&&0.53 \tiny (0.512, 0.541) & \small n/a  \\
-\rowcolor[gray]{.95} KK &&\textsf{x}&&&&&&\textsf{x}&&&&&&\textsf{x}&&&&0.52 \tiny (0.501, 0.532) & \small n/a  \\
-LL &&\textsf{x}&&&&&&&\textsf{x}&&&&&\textsf{x}&&&&0.27 \tiny (0.245, 0.303) & \small n/a  \\
-\rowcolor[gray]{.95} MM &&\textsf{x}&&&&&&&&\textsf{x}&&&&\textsf{x}&&&&$-0.12$ \tiny ($-0.13$, $-0.11$) & \small n/a  \\
-NN &&\textsf{x}&&&&&&&&&\textsf{x}&&&\textsf{x}&&&&$-0.20$ \tiny ($-0.21$, $-0.20$) & \small n/a   \\
+%R \footnotesize hot/ dry &&\textsf{x}&&&\textsf{x}&&&&&&&\textsf{x}&&&\textsf{x}&\textsf{x}&\textsf{x}& n/a& 0.07 \\
+\rowcolor[gray]{.95} S &&\textsf{x}&&&&\textsf{x}&&&&&&\textsf{x}&&&\textsf{x}&\textsf{x}&0.58 \\
+T &&\textsf{x}&&&&&\textsf{x}&&&&&\textsf{x}&&&\textsf{x}&\textsf{x}&0.51 \\
+\rowcolor[gray]{.95} U &&\textsf{x}&&&&&&\textsf{x}&&&&\textsf{x}&&&\textsf{x}&\textsf{x}&0.90 \\
+V &&\textsf{x}&&&&&&&\textsf{x}&&&\textsf{x}&&&\textsf{x}&\textsf{x}&$-0.27$ \\
+\rowcolor[gray]{.95} W &&\textsf{x}&&&&&&&&\textsf{x}&&\textsf{x}&&&\textsf{x}&\textsf{x}&$-0.18$ \\
+X &&\textsf{x}&&&&&&&&&\textsf{x}&\textsf{x}&&&\textsf{x}&\textsf{x}&0.76 \\
+\rowcolor[gray]{.95} AA &&\textsf{x}&&\textsf{x}&&&&&&&&\textsf{x}&&&&&0.50 \hspace{2em} \footnotesize (0.497, 0.501)  \\
+BB &&\textsf{x}&&&\textsf{x}&&&&&&&\textsf{x}&&&&&0.73 \hspace{2em}  \footnotesize (0.729, 0.733)  \\
+\rowcolor[gray]{.95} CC &&\textsf{x}&&&&\textsf{x}&&&&&&&\textsf{x}&&&&0.38 \hspace{2em} \footnotesize (0.370, 0.388)  \\
+DD &&\textsf{x}&&&&&\textsf{x}&&&&&&\textsf{x}&&&&1.56 \hspace{2em} \footnotesize (1.545, 1.572)   \\
+\rowcolor[gray]{.95} EE &&\textsf{x}&&&&&&\textsf{x}&&&&&\textsf{x}&&&&0.90 \hspace{2em} \footnotesize (0.864, 0.904)  \\
+FF &&\textsf{x}&&&&&&&\textsf{x}&&&&\textsf{x}&&&&0.62 \hspace{2em} \footnotesize (0.592, 0.637)   \\
+\rowcolor[gray]{.95} GG &&\textsf{x}&&&&&&&&\textsf{x}&&&\textsf{x}&&&&0.73 \hspace{2em} \footnotesize (0.727, 0.753)  \\
+HH &&\textsf{x}&&&&&&&&&\textsf{x}&&\textsf{x}&&&&1.11 \hspace{2em} \footnotesize (1.108, 1.126)  \\
+\rowcolor[gray]{.95} II &&\textsf{x}&&&&\textsf{x}&&&&&&&&\textsf{x}&&&0.50 \hspace{2em} \footnotesize (0.492, 0.513)  \\
+JJ &&\textsf{x}&&&&&\textsf{x}&&&&&&&\textsf{x}&&&0.71 \hspace{2em} \footnotesize (0.692, 0.726)   \\
+\rowcolor[gray]{.95} KK &&\textsf{x}&&&&&&\textsf{x}&&&&&&\textsf{x}&&&0.76 \hspace{2em} \footnotesize (0.739, 0.774)   \\
+LL &&\textsf{x}&&&&&&&\textsf{x}&&&&&\textsf{x}&&&0.41 \hspace{2em} \footnotesize (0.378, 0.448)   \\
+\rowcolor[gray]{.95} MM &&\textsf{x}&&&&&&&&\textsf{x}&&&&\textsf{x}&&&0.03   \hspace{2em} \footnotesize (0.013, 0.040)   \\
+NN &&\textsf{x}&&&&&&&&&\textsf{x}&&&\textsf{x}&&&$-0.10$ \hspace{2em} \footnotesize ($-0.112$, $-0.097$)    \\
 \hline
-\multicolumn{20}{p{.96\textwidth}}{*Note: We did not calculate bootstrap 95\% confidence intervals for ln($\lambda$) of models “S” –“X”, since only vital rate parameters and not lambda values from these models were used in further analysis. }
+\multicolumn{18}{p{.96\textwidth}}{*Note: We did not calculate bootstrap 95\% confidence intervals for ln($\lambda$) of models “S” –“X”, since only vital rate parameters and not lambda values from these models were used in further analysis. }
 \end{longtable}
 \end{spacing}
 
