@@ -1,0 +1,125 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Long Lined Cover Letter
+% LaTeX Template
+% Version 2.0 (September 17, 2021)
+%
+% This template originates from:
+% https://www.LaTeXTemplates.com
+%
+% Authors: Fanchao Chen
+% (chenfc@fudan.edu.cn)
+%
+% License:
+% CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage{charter} % Use the Charter font
+
+\usepackage[
+	a4paper, % Paper size
+	top=1in, % Top margin
+	bottom=1in, % Bottom margin
+	left=1in, % Left margin
+	right=1in, % Right margin
+	%showframe % Uncomment to show frames around the margins for debugging purposes
+]{geometry}
+
+\setlength{\parindent}{0pt} % Paragraph indentation
+\setlength{\parskip}{1em} % Vertical space between paragraphs
+
+\usepackage{graphicx} % Required for including images
+
+\usepackage{fancyhdr} % Required for customizing headers and footers
+
+\fancypagestyle{firstpage}{%
+	\fancyhf{} % Clear default headers/footers
+	\renewcommand{\headrulewidth}{0pt} % No header rule
+	\renewcommand{\footrulewidth}{1pt} % Footer rule thickness
+}
+
+\fancypagestyle{subsequentpages}{%
+	\fancyhf{} % Clear default headers/footers
+	\renewcommand{\headrulewidth}{1pt} % Header rule thickness
+	\renewcommand{\footrulewidth}{1pt} % Footer rule thickness
+}
+
+\AtBeginDocument{\thispagestyle{firstpage}} % Use the first page headers/footers style on the first page
+\pagestyle{subsequentpages} % Use the subsequent pages headers/footers style on subsequent pages
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	FIRST PAGE HEADER
+%----------------------------------------------------------------------------------------
+
+\includegraphics[width=0.4\textwidth]{UWtwoline_H_Botany_black.png} % Logo
+
+\vspace{-1em} % Pull the rule closer to the logo
+
+\rule{\linewidth}{1pt} % Horizontal rule
+
+\bigskip\bigskip % Vertical whitespace
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\hfill
+\begin{tabular}{l @{}}
+	\today \\ % Date
+	Alice Stears\\
+        Botany Department\\
+	  University of Wyoming\\ % Address
+	1000 E University Ave. \\
+\end{tabular}
+
+\bigskip % Vertical whitespace
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE AND GREETING
+%----------------------------------------------------------------------------------------
+
+%\begin{tabular}{@{} l}
+%	Mrs.\ XXX \\
+%	Recruitment Officer \\
+%	The Corporation \\
+%	123 Pleasant Lane \\
+%	City, State 12345
+%\end{tabular}
+
+Dear Editors of \textit{Journal of Ecology},
+
+\bigskip % Vertical whitespace
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+Please consider our manuscript, “Negative density dependence promotes persistence of a globally rare yet locally abundant plant species \textit{(Oenothera coloradensis)}” for publication as a Research Article in \textit{Journal of Ecology}. This manuscript is not being considered for publication elsewhere. All authors have approved the manuscript and agree with its submission to this journal.
+
+Elucidating the mechanisms that allow small populations of rare species to persist has been a goal of many ecologists since the discipline's inception. Classical theory predicts that species should either become common or go extinct, yet the earth is covered with small populations of naturally rare species. Ecologists have proposed several different demographic mechanisms that allow small populations of rare species to maintain positive population growth rates, the most common of which are vital rate buffering, demographic compensation, negative density dependence, spatial asynchrony, and fine-scale source-sink dynamics. These mechanisms have all been explored individually, but rarely have been tested simultaneously in the same system. In this study, we used integral projection models (IPMs)to evaluate whether any of these five proposed mechanisms of small population persistence have enabled populations of an endemic rare plant species, \textit{Oenothera coloradensis}, to persist over time. We also tested the extent to which explicitly modeling the cryptic seed bank stage alters conclusions about population viability for this species.
+
+Our analyses identified strong evidence for only one persistence mechanism, negative density dependence, in populations of \textit{O. coloradensis}. This suggests that subpopulations increase rapidly in size when abundance is low, allowing this species to sidestep the demographic and genetic challenges of small population size that rare species typically face. These shows that globally rare species can employ many different strategies for persistence, and additionally illustrate that just one of the proposed mechanisms can be sufficient for long-term persistence of a species. We also determined that incorporating the seed bank stage into IPMs for \textit{O. coloradensis} significantly increased the asymptotic population growth rate calculated from these models. This reinforces the notion that seed banks can buffer populations against collapse. Additionally, this demonstrates that failing to explicitly account for cryptic life stages in demographic models, a relatively common practice, can have significant impacts on model outcomes and subsequent management and conservation practices. 
+
+Our study integrates multiple proposed mechanisms of rare-species persistence into a synthetic framework that we test with a methodologically rigorous, yet flexible approach. Both the ecological concepts and practical methods we describe are applicable across study systems and even taxonomic groups, so this manuscript will be of interest to a wide constituent of the \textit{Journal of Ecology} readership. 
+
+We look forward to hearing from you.
+
+
+\bigskip % Vertical whitespace
+
+On behalf of all co-authors,
+
+\bigskip % Vertical whitespace
+
+Alice Stears, Ph.D.
+
+\end{document}

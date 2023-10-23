@@ -1,0 +1,397 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+%\usepackage{natbib}
+\usepackage{indentfirst} % to indent the first paragraph after a section heading\
+\usepackage{tabularray}
+\usepackage{xcolor}
+
+\usepackage{apacite}
+\bibliographystyle{apacite-copy}
+%\setcitestyle{aysep={,}} % separate author name and year with a comma
+\renewcommand{\BRetrievedFrom}{" "}
+\renewcommand{\BRetrieved}{" "}
+\renewcommand{\doiprefix}{https://doi.org/}
+\AtBeginEnvironment{thebibliography}{\linespread{1.5}\selectfont} % make bibliography single-spaced
+
+% new command to make a better type of column
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\usepackage{booktabs, tabularx, longtable}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{graphicx} 
+\usepackage[section]{placeins}
+\usepackage{amsmath}
+\usepackage[leftcaption]{sidecap}
+\graphicspath{ {./figures/} }
+\usepackage{setspace}
+\usepackage{longtable}
+\renewcommand\arraystretch{1.0}
+\usepackage{multirow}
+
+\usepackage{caption}
+\captionsetup[table]{font={stretch=1.05, normalfont}}   %% change table caption spacing
+\captionsetup[figure]{font={stretch=1.05, normalfont}} %% change figure caption spacing
+\usepackage{titlesec}
+\titleformat{\section}
+ {\normalfont\fontsize{14}{15}\bfseries}{\thesection}{1em}{} %change the size of section header font
+\titleformat{\subsection}
+ {\normalfont\fontsize{12}{15}\bfseries}{\thesubsection}{1em}{} %change the size of subsection header font
+\renewcommand{\thesection}{} %remove the section numbers
+\renewcommand{\thesubsection}{} %remove subsection numbers
+
+%try to deal with the problem of too long figure caption
+%\DeclareCaptionLabelFormat{adja-page}{\hrulefill\\#1 #2 \emph{(previous page)}}}
+%\usepackage{subfig}
+
+%try to deal with issue of figures going to the end of the document
+%\makeatletter
+%\AtBeginDocument{%
+ %\expandafter\renewcommand\expandafter\subsection\expandafter{%
+ % \expandafter\@fb@secFB\subsection
+ %}
+%}
+\makeatother
+
+\geometry{margin = 1in}
+\pagestyle{fancy}
+\fancyhf{}
+%set the header
+\rhead{\thepage}
+\lhead{Supplementary Matrial: \textit{O. coloradensis} population dynamics}
+%set the line spacing
+\renewcommand{\baselinestretch}{2}
+%add line numbers
+\usepackage{lineno}
+\linenumbers
+
+
+\renewcommand{\thepage}{S\arabic{page}}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+
+%% Begin the document! 
+\begin{document}
+
+\begin{flushleft}
+\large\textbf{Negative density dependence promotes persistence of a globally rare yet locally abundant plant species \textit{(Oenothera coloradensis)}}
+
+\end{flushleft}
+
+
+\section*{Supplementary Materials}
+\normalfont
+\subsection{Species Information}
+\textit{Oenothera coloradensis} seeds are contained within small, indehiscent capsules that contain 2-5 seeds each \cite{Burgess2005CapsuleColoradensis}. A single adult individual can produce $>$500 capsules. This species does not reproduce vegetatively, although seeds typically germinate near the base of the parent plant, which often results in dense patches of vegetative individuals \cite{Heidel202133-YearWyoming}. \textit{O. coloradensis} is pollinated primarily by hawkmoths (Krakos, pers. comm. to B. Heidel, 2013). Seed dispersers are unknown \cite{Floyd1998, Heidel202133-YearWyoming}. Previous work established that \textit{O. coloradensis} population growth rate is particularly impacted by recruitment of seedlings \cite{Floyd1998}. Recruitment increases when non-\textit{O. coloradensis} community biomass is removed, indicating that surrounding grasses and forbs outcompete or shade-out seedlings \cite{Munk2002RosetteSpecies}.
+\nocite{krakosPersonalComm}
+
+\textit{O. coloradensis} commonly co-occurs with \textit{Agrostis stolonifera}, \textit{Pascopyrum smithii}, \textit{Poa pratensis}, \textit{Glycyrrhiza lepidota}, \textit{Iris missouriensis}, \textit{Cirsium flodmanii}, and \textit{Grindelia squarrosa} (Endangered and Threatened Wildlife and Plants, 2000; Munk et al., 2002). Encroachment of woody shrubs such as \textit{Salix exigua} has been correlated with declining numbers in some populations \cite{Heidel202133-YearWyoming}.
+\nocite{USFWS2019}
+
+The Wyoming Natural Diversity Database (WYNDD) began a base-wide census of reproductive individuals in the FEWAFB population in 1986, and has repeated this census annually since 1988 \cite{Heidel202133-YearWyoming}. The first estimate of species size after its full geographic range was identified occurred in 1998, when it was approximated that the entire species consisted of 47,300 to 50,300 reproductive individuals \cite{Fertig2000-ow}.
+
+\subsection{Seed Production Estimation}
+It was not possible to measure seed production exactly because O. coloradensis seeds are contained in indehiscent capsules. Additionally, buds on the same individual flower and set seed with a time lag of up to several weeks, so mature seed capsules often exist at the tip of a stem while un-opened buds lower down on that same stem have not yet flowered. This lag makes it difficult to count the total number of capsules produced by an individual. However, seed capsules leave a noticeable scar on the stem, so we used the number of seed capsule scars on reproductive stems as an estimate of capsule production. Counting scars is extremely time-intensive since a single plant can produce several hundred capsules, so we used Poisson generalized linear regression to estimate the relationship between the length of stem bearing capsule scars and the number of capsules produced by that stem. A Poisson regression model fit to stem measurements and capsule counts from 106 individuals in 2018 indicated that the number of capsules produced by an individual (C) can be predicted by $e^{(1.843 + 0.119\text{\textsf{x}}\text{S}))}$, where S is the stem length in cm (pseudo $R^2$ = 0.42, P $<$  0.01, Residual deviance = 186.98, df = 104) (Fig. \ref{fig:seedRegression}). We used this relationship to estimate capsule production for each reproductive individual. Previous work indicated that each capsule contained an average of 4 seeds, so we multiplied the estimated number of capsules produced by an adult plant by 4 to estimate seed production \cite{Burgess2005CapsuleColoradensis}.
+
+\subsection{Discrete Vital Rate Parameters}
+ Previously-published data from a greenhouse experiment using \textit{O. coloradensis} seed capsules collected from the FEWAFB populations determined that viable seeds had an average germination rate of 20.3\% after cold-stratification, and did not identify a consistent decline in germination rate over five years \cite{Burgess2005CapsuleColoradensis}. This study also found that 58.5\% of seeds produced were viable. We conducted an additional seed study to determine if overwintering in natural conditions lead to a lower germination rate than was identified in the previous greenhouse study. We buried 60 field-collected seed capsules in mesh bags at 6 locations near our demographic study plots at FEWAFB, and then recovered the seed bags after one winter. An average of 10\% of seed capsules were not recoverable, likely because they were non-viable and withered away or were eaten. We planted the recovered capsules in standard greenhouse conditions, and found a mean germination rate of 6.8\%. This germination rate was much lower than that identified by Burgess et al., however our seed study had a much smaller sample size, reducing the reliability of our result \cite{Burgess2005CapsuleColoradensis}. However, it is still likely that true germination rates are much lower than those identified in greenhouse conditions, so we reduced the germination rate identified by Burgess et al. by 20\%. 
+
+\subsection{Seedling Data}
+Although seedlings (above-ground plants $<$ 3 cm in leaf length) were only tallied in each plot quadrant and year instead of tagged and measured, we incorporated them into the dataset for continuous, above-ground plants by assigning them a random size drawn from a continuous, uniform probability distribution (seedling size $\sim U($0.1, 3)). Each new recruit to the $>$ 3 cm stage in year $t+1$ was randomly assigned to a seedling within the same plot quadrant in year $t$. Seedlings in year $t$ that were assigned a recruit in year $t+1$ survived, while those without an assigned recruit died. Incorporating seedlings into the continuous dataset in this fashion allowed us to create IPMs using only one discrete stage.
+
+\begin{table}[h!]
+\centering
+\begin{spacing}{1.2}
+\caption{ \internallinenumbers Permanent Plot Locations and subpopulation-level sample sizes for each year and individual type (seedling vs. non-seedling). GPS coordinates listed in decimal degrees, map datum and spheroid: WGS 84.\label{plotLocationTable}}
+\begin{tabular}{cc p{.06 \textwidth} p{.08 \textwidth} p{.11 \textwidth} |p{.03 \textwidth}p{.03 \textwidth}|p{.03 \textwidth}p{.03 \textwidth}|p{.03 \textwidth}p{.03 \textwidth}}
+\toprule
+ & & & & & \multicolumn{6}{c}{Sample Size}\\
+ & & & & & \multicolumn{2}{c}{2018} & \multicolumn{2}{c}{2019} & 2020 \\ 
+Site & Subpopulation & Plot Name & N \:\:\:\: Coord. & W  \:\:\:\:\:\:\:\: Coord. & \rotatebox{90}{non-seedling} & \rotatebox{90}{seedling} & \rotatebox{90}{non-seedling} & \rotatebox{90}{seedling} & \rotatebox{90}{non-seedling} & \rotatebox{90}{seedling}\\ 
+\hline
+\multirow{9}{*}{\rotatebox{90}{FEWAFB}}  & \cellcolor[gray]{.95} Unnamed Creek & \cellcolor[gray]{.95} U3 & \cellcolor[gray]{.95} \small 41.13642 & \cellcolor[gray]{.95} \small -104.87209 & \multirow{3}{*}{\small740} & \multirow{3}{*}{\small525} & \multirow{3}{*}{\small528} & \multirow{3}{*}{\small417} & \multirow{3}{*}{\small406}& \multirow{3}{*}{\small530} \\
+ &Unnamed Creek & U4& \small 41.13634 & \small -104.87183 & & & & \\ 
+ & \cellcolor[gray]{.95}Unnamed Creek & \cellcolor[gray]{.95}U6  & \cellcolor[gray]{.95}\small 41.13647 & \cellcolor[gray]{.95}\small -104.87132 & & & &  \\
+\cline{2-11}
+ & Diamond Creek & D7 & \small 41.14340 & \small -104.88380 & \multirow{3}{*}{\small235} & \multirow{3}{*}{\small209} & \multirow{3}{*}{\small347} & \multirow{3}{*}{\small149} & \multirow{3}{*}{\small275} & \multirow{3}{*}{\small81}\\
+  & \cellcolor[gray]{.95} Diamond Creek & \cellcolor[gray]{.95} D10 & \cellcolor[gray]{.95} \small 41.14441& \cellcolor[gray]{.95} \small-104.88303 & &&& \\
+ & Diamond Creek & D11 & \small 41.14431& \small -104.88094 &&&&\\
+\cline{2-11}
+  & \cellcolor[gray]{.95} Crow Creek & \cellcolor[gray]{.95}C4 & \cellcolor[gray]{.95}\small 41.15540 & \cellcolor[gray]{.95}\small -104.87497 & 
+  \multirow{3}{*}{\small203} & \multirow{3}{*}{\small127} & \multirow{3}{*}{\small214} & \multirow{3}{*}{\small98} & \multirow{3}{*}{\small150} & \multirow{3}{*}{\small160}\\ 
+ & Crow Creek & C5 & \small 41.15477 & \small -104.87474 &&&&\\
+  & \cellcolor[gray]{.95}Crow Creek & \cellcolor[gray]{.95}C8 & \cellcolor[gray]{.95}\small 41.15534 & \cellcolor[gray]{.95}\small -104.87487 &&&&\\
+\hline
+ \multirow{9}{*}{\rotatebox{90}{Soapstone}} & Pasture HQ5 & S1 & \small 40.99297& \small -105.00925 & \multirow{3}{*}{\small283} & \multirow{3}{*}{\small772} & \multirow{3}{*}{\small714} & \multirow{3}{*}{\small813} & \multirow{3}{*}{\small641} & \multirow{3}{*}{\small423}\\
+ & \cellcolor[gray]{.95}Pasture HQ5 & \cellcolor[gray]{.95}S2 & \cellcolor[gray]{.95}\small40.99318& \cellcolor[gray]{.95}\small-105.00935 &&&&\\
+  & Pasture HQ5 & S3 & \small40.99342& \small-105.00937 &&&& \\
+\cline{2-11}
+  & \cellcolor[gray]{.95}Pasture HQ3 & \cellcolor[gray]{.95}S4 & \cellcolor[gray]{.95}\small40.98623& \cellcolor[gray]{.95}\small-105.01691 & \multirow{3}{*}{\small102} & \multirow{3}{*}{\small138} & \multirow{3}{*}{\small158} & \multirow{3}{*}{\small173} & \multirow{3}{*}{\small117} & \multirow{3}{*}{\small104}\\
+  & Pasture HQ3 & S5 & \small40.98639& \small-105.01671 &&&&\\
+ & \cellcolor[gray]{.95}Pasture HQ3 & \cellcolor[gray]{.95}S6 & \cellcolor[gray]{.95}\small40.98650& \cellcolor[gray]{.95}\small-105.01656 &&&&\\
+\cline{2-11}
+  & Meadow & S7 & \small40.98753 & \small-105.02148 & \multirow{3}{*}{\small44} & \multirow{3}{*}{\small31} & \multirow{3}{*}{\small47} & \multirow{3}{*}{\small28} & \multirow{3}{*}{\small48} & \multirow{3}{*}{\small12}\\
+  & \cellcolor[gray]{.95} Meadow & \cellcolor[gray]{.95} S8 & \cellcolor[gray]{.95} \small40.98747 & \cellcolor[gray]{.95} \small-105.02179 &&&&\\
+  & Meadow & S9 & \small40.98724 & \small-105.02145 &&&&\\
+\hline
+\end{tabular}
+\end{spacing}
+\end{table}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 1\textwidth]{figures/COBP_mapFigure.pdf}
+    \caption{\internallinenumbers(\textbf{A}) The current known distribution of \textit{O. coloradensis}, shown in dark blue, extends into Wyoming, Colorado, and Nebraska. The historical distribution included the current distribution area as well as some additional locations shown in pale blue. Distribution information comes from Everson, 2019. Black dots show the relative locatino of the FEWAFB and Soapstone prairie populations included in this study. Colored dots show the location of plots in each subpopulation at FEWAFB (\textbf{B}) and Soapstone Prairie (\textbf{C}).}
+    \label{fig:plotMap}
+\end{figure}
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=.7\textwidth]{seedRegressionPlot.pdf}
+  \caption{ \internallinenumbers As the stem length of an \textit{Oenothera coloradensis} flowering individual increases, the number of capsules it produces increases as well. The red line shows the fit from a Poisson generalized linear model, and the grey ribbon shows the 95\% confidence interval around the fitted relationship. Model equation: Number of capsules = $e^{(1.843 + 0.119\text{\textsf{x}}\text{S}))}$, where \textit{S} is stem length in cm (pseudo R-squared = 0.42, \textit{P} = $<$ 0.01, Residual deviance = 186.98, df = 104).  }
+  \label{fig:seedRegression}
+\end{figure} 
+
+
+\begin{spacing}{1.3}
+    \begin{longtable}[ht!]{c|l|p{0.73\textwidth}}
+    \caption{Continuous vital rate functions used in each IPM. In the functions below, $size_t$ indicates plant longest leaf length in the previous year, $N_t$ indicates number of individuals in a plot in the previous year, $T_G$ indicates mean temperature in the previous year's growing season, and $T_W$ indicates the mean temperature in winter of the previous year. 
+    \label{tab:VitalRateFunctions}} \\
+    \rowcolor[gray]{.95} IPM & Vital Rate & Equation  \\
+        \hline
+        A \& B & Survival  &   $logit(\textit{s(z)}) = -0.21 + 0.37 (ln(size_t)) $ \\
+         \rowcolor[gray]{.95}& Flowering  & logit(\textit{Pb(z)})  $= -34.06 + 27.67(ln(size_t)) -5.78 (ln(size_t)^2)$ \\
+         & Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 1.57$ + $0.18 (ln(size_t))$; $\sigma_s = 0.51$\\
+         \rowcolor[gray]{.95}& Seed prod.  & $exp(\textit{b(z)}) = 3.35 + 1.19 (ln(size_t))$  \\
+         & Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.21$; $\sigma_r = 0.77$ \\
+         \hline
+        \rowcolor[gray]{.95}C &   Survival  &   $logit(\textit{s(z)}) = -0.73 + 0.45 (ln(size_t)) $ \\
+         & Flowering  & $logit(\textit{Pb(z)})  = -40.31 + 33.40(ln(size_t)) -7.09 (ln(size_t)^2)$ \\
+         \rowcolor[gray]{.95}& Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 1.64$ + $0.11 (ln(size_t))$; $\sigma_s = 0.42$\\
+         & Seed prod.  & $exp(\textit{b(z)}) = 3.73 + 1.01 (ln(size_t))$  \\
+         \rowcolor[gray]{.95}& Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.19$; $\sigma_r = 0.76$ \\
+         \hline
+        D &  Survival  &   $logit(\textit{s(z)}) = 1.01 + -0.01 (ln(size_t)) $ \\
+         \rowcolor[gray]{.95}& Flowering  & $logit(\textit{Pb(z)})  = -44.52 + 36.73(ln(size_t)) -7.69 (ln(size_t)^2)$ \\
+         & Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 1.84 + 0.26(ln(size_t))$; $\sigma_s = 0.52$\\
+         \rowcolor[gray]{.95}& Seed prod.  & $exp(\textit{b(z)}) = 3.80 + 1.11 (ln(size_t))$  \\
+         & Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.22$; $\sigma_r = 0.78$ \\
+         \hline
+        \rowcolor[gray]{.95}E &   Survival  &   $logit(\textit{s(z)})= 0.21 +0.18(ln(size_t))$ \\
+         & Flowering  & $logit(\textit{Pb(z)})  = -18.73 + 15.84(ln(size_t)) -3.63 (ln(size_t)^2)$ \\
+         \rowcolor[gray]{.95}& Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 1.74 + 0.24(ln(size_t))$; $\sigma_s = 0.49$\\
+         & Seed prod.  & $exp(\textit{b(z)}) = 3.83 + 0.92 (ln(size_t))$  \\
+         \rowcolor[gray]{.95}& Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.19$; $\sigma_r = 0.80$ \\
+         \hline
+        F &  Survival  &   $logit(\textit{s(z)})= 0.54 +0.24(ln(size_t))$ \\
+         \rowcolor[gray]{.95}& Flowering  & $logit(\textit{Pb(z)})  = -27.49 + 20.83(ln(size_t)) -4.04 (ln(size_t)^2)$ \\
+         & Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 1.62 + 0.16(ln(size_t))$; $\sigma_s = 0.44$\\
+         \rowcolor[gray]{.95}& Seed prod.  & $exp(\textit{b(z)}) = 1.72 + 1.51 (ln(size_t))$  \\
+         & Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.15$; $\sigma_r = 0.80$ \\
+         \hline
+        \rowcolor[gray]{.95}G &  Survival  &  $logit(\textit{s(z)})= -0.19 +0.30(ln(size_t))$ \\
+         & Flowering  & $logit(\textit{Pb(z)})  = -32.72 + 23.50(ln(size_t)) -4.23 (ln(size_t)^2)$ \\
+         \rowcolor[gray]{.95}& Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 1.42 + 0.21(ln(size_t))$; $\sigma_s = 0.42$\\
+         & Seed prod.  & $exp(\textit{b(z)}) = 0.83 + 2.06 (ln(size_t))$  \\
+         \rowcolor[gray]{.95}& Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.21$; $\sigma_r = 0.77$ \\
+         \hline
+        H &  Survival  &  $logit(\textit{s(z)})= -0.32 +0.62(ln(size_t))$ \\
+         \rowcolor[gray]{.95}& Flowering  & $logit(\textit{Pb(z)})  = -31.04 + 23.96(ln(size_t)) -4.71 (ln(size_t)^2)$ \\
+         & Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 1.50 + 0.05(ln(size_t))$; $\sigma_s = 0.43$\\
+        \rowcolor[gray]{.95} & Seed prod.  & $exp(\textit{b(z)}) = 2.53 + 1.59 (ln(size_t))$  \\
+         & Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.23$; $\sigma_r = 0.76$ \\
+         \hline
+        \rowcolor[gray]{.95}I &  Survival  &  $logit(\textit{s(z)})= -0.33 +0.46(ln(size_t)) - 0.0003 (N_t)$ \\
+         & Flowering  & $logit(\textit{Pb(z)})  = -41.36 + 33.73(ln(size_t)) -7.21 (ln(size_t)^2) + 0.0008(N_t)$ \\
+         \rowcolor[gray]{.95}& Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 2.19 + 0.14(ln(size_t)) - 0.0005(N_t)$; $\sigma_s = 0.42$\\
+         & Seed prod.  & $exp(\textit{b(z)}) = 3.73 + 1.01(ln(size_t))$  \\
+         \rowcolor[gray]{.95}& Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.19$; $\sigma_r = 0.76$ \\
+         \hline
+         J &  Survival  &  $logit(\textit{s(z)})= 17.59 +0.05(ln(size_t)) - 0.03 (N_t)$ \\
+         \rowcolor[gray]{.95}& Flowering  & $logit(\textit{Pb(z)})  = -46.27 + 37.38(ln(size_t)) -7.83 (ln(size_t)^2) + 0.002(N_t)$ \\
+         & Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 3.70 + 0.28(ln(size_t)) - 0.004(N_t)$; $\sigma_s = 0.51$\\
+         \rowcolor[gray]{.95}& Seed prod.  & $exp(\textit{b(z)}) = 3.80 + 1.11(ln(size_t))$  \\
+         & Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.22$; $\sigma_r = 0.78$ \\
+         \hline
+         K\rowcolor[gray]{.95} &  Survival  &  $logit(\textit{s(z)})= -13.85 +0.20(ln(size_t)) + 0.04(N_t)$ \\
+         & Flowering  & $logit(\textit{Pb(z)})  = -21.21 + 15.50(ln(size_t)) -3.55(ln(size_t)^2) + 0.009(N_t)$ \\
+         \rowcolor[gray]{.95}& Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = -0.49 + 0.24(ln(size_t)) + 0.006(N_t)$; $\sigma_s = 0.48$\\
+         & Seed prod.  & $exp(\textit{b(z)}) = 3.83 + 0.92(ln(size_t))$  \\
+         \rowcolor[gray]{.95}& Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.19$; $\sigma_r = 0.80$ \\
+         \hline
+         L  &  Survival  &  $logit(\textit{s(z)})= 33.06 + 0.24(ln(size_t)) -0.44(N_t)$ \\
+         \rowcolor[gray]{.95}& Flowering  & $logit(\textit{Pb(z)})  = -26.23 + 21.0(ln(size_t)) -4.01(ln(size_t)^2) -0.02(N_t)$ \\
+         & Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 15.89 + 0.17(ln(size_t)) -0.19(N_t)$; $\sigma_s = 0.43$\\
+         \rowcolor[gray]{.95}& Seed prod.  & $exp(\textit{b(z)}) = 1.72 + 1.51(ln(size_t))$  \\
+         & Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.15$; $\sigma_r = 0.80$ \\
+         \hline
+         \rowcolor[gray]{.95}M  &  Survival  &  $logit(\textit{s(z)})= 5.39 + 0.37(ln(size_t)) -0.02(N_t)$ \\
+         & Flowering  & $logit(\textit{Pb(z)})  = -32.79 + 24.02(ln(size_t)) -4.34(ln(size_t)^2) -0.002(N_t)$ \\
+         \rowcolor[gray]{.95}& Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 2.26 + 0.23(ln(size_t)) - 0.003(N_t)$; $\sigma_s = 0.39$\\
+         & Seed prod.  & $exp(\textit{b(z)}) = 0.83 + 2.06(ln(size_t))$  \\
+         \rowcolor[gray]{.95}& Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.21$; $\sigma_r = 0.77$ \\
+         \hline
+         N  &  Survival  &  $logit(\textit{s(z)})= 4.30 + 0.87(ln(size_t)) -0.004(N_t)$ \\
+         \rowcolor[gray]{.95}& Flowering  & $logit(\textit{Pb(z)})  = -28.50 + 25.52(ln(size_t)) -4.93(ln(size_t)^2) -0.004(N_t)$ \\
+         & Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 2.76 + 0.16(ln(size_t)) - 0.001(N_t)$; $\sigma_s = 0.36$\\
+         \rowcolor[gray]{.95}& Seed prod.  & $exp(\textit{b(z)}) = 2.53 + 1.59(ln(size_t))$  \\
+         & Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.23$; $\sigma_r = 0.77$ \\
+         \hline
+         \rowcolor[gray]{.95}S  &  Survival  &  $logit(\textit{s(z)})= 1.11 + 0.49(ln(size_t)) + 0.005(N_t) - 0.28 (T_G)$ \\
+         & Flowering  & $logit(\textit{Pb(z)}) = -47.12 + 33.70(ln(size_t)) -7.21(ln(size_t)^2) +0.0004 (N_t) + 0.42 (T_G) - 0.23 (T_W)$ \\
+         \rowcolor[gray]{.95}& Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 4.12 + 0.14(ln(size_t)) +0.0009(N_t) -0.20 (T_G)$; $\sigma_s = 0.41$\\
+         & Seed prod.  & $exp(\textit{b(z)}) = 3.52 + 0.90(ln(size_t)) + 0.0008 (N_t) + 0.01 (T_G) + 0.10 (T_W)$  \\
+         \rowcolor[gray]{.95}& Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = -0.38 + 0.00005 (N_t) + 0.04 (T_G) + 0.03 (T_W) $; $\sigma_r = 0.76$ \\
+         \hline
+         T  &  Survival  &  $logit(\textit{s(z)})= -27.59 + 0.21(ln(size_t)) -0.0006(N_t) + 1.91 (T_G)$ \\
+         \rowcolor[gray]{.95}& Flowering  & $logit(\textit{Pb(z)})  = -70.28 + 35.37(ln(size_t)) -7.45(ln(size_t)^2) - 0.003 (N_t) + 1.83 (T_G) - 0.95 (T_W)$ \\
+         & Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = -2.88 + 0.27(ln(size_t)) +0.0002 (N_t) + 0.32 (T_G)$; $\sigma_s = 0.49$\\
+         \rowcolor[gray]{.95}& Seed prod.  & $exp(\textit{b(z)}) = -12.0 + 0.80(ln(size_t)) -0.002 (N_t) + 1.07 (T_G) - 0.94 (T_W)$  \\
+         & Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = -0.65 -0.0007 (N_t) + 0.06 (T_G) - 0.16 (T_W) $; $\sigma_r = 0.77$ \\
+         \hline
+         \rowcolor[gray]{.95}U  &  Survival  &  $logit(\textit{s(z)})= -14.02 + 0.39(ln(size_t)) + 0.006(N_t) + 0.87 (T_G)$ \\
+         & Flowering  & $logit(\textit{Pb(z)})  = -22.83 + 16.0(ln(size_t)) -3.66(ln(size_t)^2) + 0.002 (N_t) + 0.19 (T_G) - 1.01 (T_W)$ \\
+         \rowcolor[gray]{.95}& Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 0.40 + 0.25(ln(size_t)) - 0.001 (N_t) + 0.10 (T_G)$; $\sigma_s = 0.46$\\
+         & Seed prod.  & $exp(\textit{b(z)}) = -14.33 + 0.59(ln(size_t)) + 0.001 (N_t) + 1.18 (T_G) - 1.17 (T_W)$  \\
+         \rowcolor[gray]{.95}& Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = -0.56 -0.00002 (N_t) + 0.05 (T_G) + 0.09 (T_W) $; $\sigma_r = 0.81$ \\
+         \hline
+         V  &  Survival  &  $logit(\textit{s(z)})= -6.78 + 0.24(ln(size_t)) -0.08(N_t) + 0.69 (T_G)$ \\
+         \rowcolor[gray]{.95}& Flowering  & $logit(\textit{Pb(z)})  = -36.50 + 18.80(ln(size_t)) -3.57(ln(size_t)^2)-0.02 (N_t) + 0.79 (T_G) +0.09 (T_W)$ \\
+         & Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = -1.83 + 0.17(ln(size_t)) + 0.0003 (N_t) + 0.23 (T_G)$; $\sigma_s = 0.42$\\
+         \rowcolor[gray]{.95}& Seed prod.  & $exp(\textit{b(z)}) = 8.44 + 1.32(ln(size_t)) + 0.003 (N_t) -0.43 (T_G) - 0.18 (T_W)$  \\
+         & Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = -2.01 + 0.006 (N_t) + 0.13 (T_G) -0.01 (T_W) $; $\sigma_r = 0.80$ \\
+         \hline
+         \rowcolor[gray]{.95}W  &  Survival  &  $logit(\textit{s(z)})= -32.30 + 0.38(ln(size_t)) +0.0008(N_t) + 2.19(T_G)$ \\
+         & Flowering  & $logit(\textit{Pb(z)})  = -311.80 + 18.72(ln(size_t)) -3.56(ln(size_t)^2)-0.002 (N_t) + 17.93 (T_G) -20.46 (T_W)$ \\
+         \rowcolor[gray]{.95}& Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = -2.73 + 0.22(ln(size_t)) -0.0006 (N_t) + 0.29 (T_G)$; $\sigma_s = 0.39$\\
+         & Seed prod.  & $exp(\textit{b(z)}) = -7.07 + 1.47(ln(size_t)) + 0.003 (N_t) +0.63(T_G)$  \\
+         \rowcolor[gray]{.95}& Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 1.75 + 0.006 (N_t) - 0.10 (T_G) + 0.17 (T_W) $; $\sigma_r = 0.77$ \\
+         \hline
+         X  &  Survival  &  $logit(\textit{s(z)})= -34.59 + 0.88(ln(size_t)) +0.001(N_t) + 2.26(T_G)$ \\
+         \rowcolor[gray]{.95}& Flowering  & $logit(\textit{Pb(z)})  = -43.64 + 28.21(ln(size_t)) -5.35(ln(size_t)^2)-0.001 (N_t) + 0.57 (T_G) +1.33 (T_W)$ \\
+         & Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = -7.65 + 0.16(ln(size_t)) -0.0000004 (N_t) + 0.61 (T_G)$; $\sigma_s = 0.36$\\
+         \rowcolor[gray]{.95}& Seed prod.  & $exp(\textit{b(z)}) = -28.65 + 0.62(ln(size_t)) + 0.0005 (N_t) +2.15(T_G) - 1.64 (T_W)$  \\
+         & Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.48 - 0.00004 (N_t) - 0.01 (T_G) + 0.005 (T_W) $; $\sigma_r = 0.77$ \\
+         \hline
+         \rowcolor[gray]{.95}AA  &  Survival  &  $logit(\textit{s(z)})= -0.26 + 0.54(ln(size_t))$ \\
+         & Flowering  & $logit(\textit{Pb(z)})  = -28.96 + 21.71(ln(size_t)) -4.14(ln(size_t)^2)$ \\
+         \rowcolor[gray]{.95}& Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 1.48 + 0.10(ln(size_t))$; $\sigma_s = 0.44$\\
+         & Seed prod.  & $exp(\textit{b(z)}) = 3.12 + 1.24(ln(size_t))$  \\
+         \rowcolor[gray]{.95}& Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.23$; $\sigma_r = 0.77$ \\
+         \hline
+         BB  &  Survival  &  $logit(\textit{s(z)})= -0.18 + 0.29(ln(size_t))$ \\
+         \rowcolor[gray]{.95}& Flowering  & $logit(\textit{Pb(z)})  = -32.70 + 26.93(ln(size_t)) -5.73(ln(size_t)^2)$ \\
+         & Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 1.72 + 0.18(ln(size_t))$; $\sigma_s = 0.51$\\
+         \rowcolor[gray]{.95}& Seed prod.  & $exp(\textit{b(z)}) = 3.45 + 1.17(ln(size_t))$  \\
+         & Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.19$; $\sigma_r = 0.77$ \\
+         \hline
+         \rowcolor[gray]{.95}CC  &  Survival  &  $logit(\textit{s(z)})= -1.23 + 0.76(ln(size_t))$ \\
+         & Flowering  & $logit(\textit{Pb(z)})  = -45.81 + 38.00(ln(size_t)) -8.03(ln(size_t)^2)$ \\
+         \rowcolor[gray]{.95}& Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 1.57 + 0.12(ln(size_t))$; $\sigma_s = 0.44$\\
+         & Seed prod.  & $exp(\textit{b(z)}) = 3.21 + 1.22(ln(size_t))$  \\
+         \rowcolor[gray]{.95}& Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.13$; $\sigma_r = 0.77$ \\
+         \hline
+         DD  &  Survival  &  $logit(\textit{s(z)})= 2.43-0.23(ln(size_t))$ \\
+         \rowcolor[gray]{.95}& Flowering  & $logit(\textit{Pb(z)})  = -86.83 + 71.52(ln(size_t)) -14.65(ln(size_t)^2)$ \\
+         & Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 1.93 + 0.25(ln(size_t))$; $\sigma_s = 0.56$\\
+         \rowcolor[gray]{.95}& Seed prod.  & $exp(\textit{b(z)}) = 6.01 + 0.34(ln(size_t))$  \\
+         & Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.30$; $\sigma_r = 0.69$ \\
+         \hline
+         \rowcolor[gray]{.95}EE  &  Survival  &  $logit(\textit{s(z)})= 0.65+0.15(ln(size_t))$ \\
+         & Flowering  & $logit(\textit{Pb(z)})  = -24.35 + 17.91(ln(size_t)) -3.49(ln(size_t)^2)$ \\
+         \rowcolor[gray]{.95}& Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 1.85 + 0.20(ln(size_t))$; $\sigma_s = 0.52$\\
+         & Seed prod.  & $exp(\textit{b(z)}) = 2.51 + 1.54(ln(size_t))$  \\
+         \rowcolor[gray]{.95}& Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.09$; $\sigma_r = 0.86$ \\
+         \hline
+         FF  &  Survival  &  $logit(\textit{s(z)})= 1.50-0.32(ln(size_t))$ \\
+         \rowcolor[gray]{.95}& Flowering  & $logit(\textit{Pb(z)})  = -70.62 + 54.30(ln(size_t)) -10.46(ln(size_t)^2)$ \\
+         & Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 1.65 + 0.21(ln(size_t))$; $\sigma_s = 0.46$\\
+         \rowcolor[gray]{.95}& Seed prod.  & $exp(\textit{b(z)}) = 1.91 + 1.39(ln(size_t))$  \\
+         & Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.10$; $\sigma_r = 0.92$ \\
+        \hline
+         \rowcolor[gray]{.95}GG  &  Survival  &  $logit(\textit{s(z)})= 0.99+0.12(ln(size_t))$ \\
+         & Flowering  & $logit(\textit{Pb(z)})  = -50.32 + 36.50(ln(size_t)) -6.54(ln(size_t)^2)$ \\
+         \rowcolor[gray]{.95}& Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 1.48 + 0.28(ln(size_t))$; $\sigma_s = 0.38$\\
+         & Seed prod.  & $exp(\textit{b(z)}) = 3.06 + 1.22(ln(size_t))$  \\
+         \rowcolor[gray]{.95}& Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.18$; $\sigma_r = 0.81$ \\ \hline
+         HH  &  Survival  &  $logit(\textit{s(z)})= 0.74+0.33(ln(size_t))$ \\
+         \rowcolor[gray]{.95}& Flowering  & $logit(\textit{Pb(z)})  = -50.91 + 40.17(ln(size_t)) -7.81(ln(size_t)^2)$ \\
+         & Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 1.62 + 0.18(ln(size_t))$; $\sigma_s = 0.39$\\
+         \rowcolor[gray]{.95}& Seed prod.  & $exp(\textit{b(z)}) = 4.20 + 0.97(ln(size_t))$  \\
+         & Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.24$; $\sigma_r = 0.76$ \\ 
+         \hline
+         \rowcolor[gray]{.95}II  &  Survival  &  $logit(\textit{s(z)})= -0.26+0.06(ln(size_t))$ \\
+         & Flowering  & $logit(\textit{Pb(z)})  = -41.11 + 36.347(ln(size_t)) -8.31(ln(size_t)^2)$ \\
+         \rowcolor[gray]{.95}& Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 1.67 + 0.16(ln(size_t))$; $\sigma_s = 0.38$\\
+         & Seed prod.  & $exp(\textit{b(z)}) = 4.92 + 0.41(ln(size_t))$  \\
+         \rowcolor[gray]{.95}& Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.22$; $\sigma_r = 0.71$ \\
+         \hline
+         JJ  &  Survival  &  $logit(\textit{s(z)})= 0.07+0.16(ln(size_t))$ \\
+         \rowcolor[gray]{.95}& Flowering  & $logit(\textit{Pb(z)})  = -24.83 + 19.82(ln(size_t)) -4.20(ln(size_t)^2)$ \\
+         & Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 1.63 + 0.32(ln(size_t))$; $\sigma_s = 0.44$\\
+         \rowcolor[gray]{.95}& Seed prod.  & $exp(\textit{b(z)}) = 4.63 + 0.66(ln(size_t))$  \\
+         & Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.09$; $\sigma_r = 0.82$ \\
+         \hline
+         \rowcolor[gray]{.95}KK  &  Survival  &  $logit(\textit{s(z)})= -0.26+0.25(ln(size_t))$ \\
+         & Flowering  & $logit(\textit{Pb(z)})  = -27.90 + 27.66(ln(size_t)) -7.00(ln(size_t)^2)$ \\
+        \rowcolor[gray]{.95} & Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 1.56 + 0.30(ln(size_t))$; $\sigma_s = 0.41$\\
+         & Seed prod.  & $exp(\textit{b(z)}) = 5.72 -0.09(ln(size_t))$  \\
+         \rowcolor[gray]{.95}& Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.80$; $\sigma_r = 0.79$ \\
+         \hline
+         LL  &  Survival  &  $logit(\textit{s(z)})= -0.22+0.77(ln(size_t))$ \\
+         \rowcolor[gray]{.95}& Flowering  & $logit(\textit{Pb(z)})  = -147.87 + 121.01(ln(size_t)) -24.82(ln(size_t)^2)$ \\
+         & Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 1.61 + 0.10(ln(size_t))$; $\sigma_s = 0.39$\\
+         \rowcolor[gray]{.95}& Seed prod.  & $exp(\textit{b(z)}) = 1.98 + 1.57(ln(size_t))$  \\
+         & Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.16$; $\sigma_r = 0.68$ \\
+         \hline
+         \rowcolor[gray]{.95}MM  &  Survival  &  $logit(\textit{s(z)})= -1.13+0.60(ln(size_t))$ \\
+         & Flowering  & $logit(\textit{Pb(z)})  = -45.56 + 39.31(ln(size_t)) -8.64(ln(size_t)^2)$ \\
+         \rowcolor[gray]{.95}& Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 1.34 + 0.14(ln(size_t))$; $\sigma_s = 0.40$\\
+         & Seed prod.  & $exp(\textit{b(z)}) = 0.71 + 2.00(ln(size_t))$  \\
+         \rowcolor[gray]{.95}& Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.32$; $\sigma_r = 0.64$ \\
+         \hline
+         NN  &  Survival  &  $logit(\textit{s(z)})= -1.74+1.39(ln(size_t))$ \\
+         \rowcolor[gray]{.95}& Flowering  & $logit(\textit{Pb(z)})  = -27.89 + 20.50(ln(size_t)) -3.99(ln(size_t)^2)$ \\
+         & Growth  &  $G(z',z) = N(\mu_s, \sigma_s)$; $\mu_s = 1.17 + 0.13(ln(size_t))$; $\sigma_s = 0.33$\\
+         \rowcolor[gray]{.95}& Seed prod.  & $exp(\textit{b(z)}) =  5.49+ 0.14(ln(size_t))$  \\
+         & Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.24$; $\sigma_r = 0.78$ \\
+         \end{longtable}
+\end{spacing}
+
+\begin{table}[h!]
+\centering
+\begin{spacing}{1.2}
+\caption{ \internallinenumbers Comparison of vital rate models with and without density dependence. The “DI” and “DD” rows contain AIC values for each vital rate model in each subpopulation for models that are density-independent (DI) and density-dependent (DD). The difference between the AIC of DI and DD models is shown in the $\Delta$AIC column. Bold text indicates that the $|\Delta|$AIC value is $>$ 3, which means that including a term for density dependence substantially changed that vital rate model. A positive $|\Delta|$AIC indicates that including density dependence improved the model, while a negative value indicates that including density dependence made model fit worse. AIC values for DI and DD values can be found in Table S3. \label{Table:DDModResults_complete}}
+\begin{tabular}{l l p{.08\textwidth} p{.1\textwidth} p{.1\textwidth}ccc}
+\toprule
+\multicolumn{2}{c}{Vital Rate Model} & \multicolumn{6}{c}{Subpopulation} 
+\\ \cline{3-8}
+& & Crow Creek & Diamond Creek & Unnamed Creek & HQ5 & HQ3 & Meadow \\ 
+\hline
+\rowcolor[gray]{.95} Survival & DI &     776.58 &  1012.68 & 2684.34 & 3242.63 & 716.66 & 166.13 \\
+\rowcolor[gray]{.95} & DD &              757.84 &  905.39  & 26848.74 & 2922.91 & 637.84 & 166.83 \\ 
+\rowcolor[gray]{.95} & $\Delta$AIC &     \textbf{18.74} &   \textbf{107.28} &  -0.41 &   \textbf{320.33} &  \textbf{78.82} &   -0.70 \\ 
+Growth & DI &                            510.34 &  953.29 &  1098.95 & 1570.93 & 300.18 & 116.54 \\
+& DD &                                   506.61 &  931.15 &  1068.14 & 1112.78 & 269.73 & 113.88 \\
+& $\Delta$AIC &                          \textbf{3.73} &    \textbf{22.15} &   \textbf{30.811} &  \textbf{458.15} &  \textbf{30.45} &  2.66 \\
+\rowcolor[gray]{.95} Flowering & DI &    371.68 &  523.30 &  1087.93 & 538.52 &  191.46 & 104.24 \\
+\rowcolor[gray]{.95} & DD &              373.31 &  523.74  & 1087.48 & 483.99 &  193.22 & 106.96 \\
+\rowcolor[gray]{.95} & $\Delta$AIC &     -1.63 &   -0.44 &   0.45 &    \textbf{54.52} &   -1.76 &  -1.72 \\
+Seed production & DI &                   842.00 &  1580.85 & 2815.89 & 1423.02 & 598.75 & 280.09 \\
+& DD &                                   835.59 &  1566.83 & 2817.19 & 1419.32 & 594.63 & 281.45 \\
+ & $\Delta$AIC &                         \textbf{6.41} &    \textbf{14.02} &   -1.29 &   \textbf{3.71} &    \textbf{4.12} &   -1.35 \\ 
+\rowcolor[gray]{.95} Recruit size & DI & 921.31 &  1028.23 & 3378.43 & 4629.87 & 967.83 & 173.03 \\
+\rowcolor[gray]{.95} & DD &              923.24 &  1026.63 & 3380.53 & 4631.84 & 969.06 & 175.02 \\ 
+\rowcolor[gray]{.95} & $\Delta$AIC &     -1.93 &   1.61 &   -1.93 &   -1.97 &   -1.23 &  -1.99 \\
+\hline
+\end{tabular}
+\end{spacing}
+\end{table}
+
+\bibliography{references}
+\end{document}

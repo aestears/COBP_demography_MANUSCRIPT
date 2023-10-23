@@ -1,0 +1,95 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+%\usepackage{natbib}
+\usepackage{indentfirst} % to indent the first paragraph after a section heading\
+\usepackage{tabularray}
+\usepackage{xcolor}
+
+\usepackage{apacite}
+\bibliographystyle{apacite-copy}
+%\setcitestyle{aysep={,}} % separate author name and year with a comma
+\renewcommand{\BRetrievedFrom}{" "}
+\renewcommand{\BRetrieved}{" "}
+\renewcommand{\doiprefix}{https://doi.org/}
+\AtBeginEnvironment{thebibliography}{\linespread{1.5}\selectfont} % make bibliography single-spaced
+
+% new command to make a better type of column
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\usepackage{booktabs, tabularx, longtable}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{graphicx} 
+\usepackage[section]{placeins}
+\usepackage{amsmath}
+\usepackage[leftcaption]{sidecap}
+\graphicspath{ {./figures/} }
+\usepackage{setspace}
+\usepackage{longtable}
+\renewcommand\arraystretch{1.0}
+\usepackage{multirow}
+
+\usepackage{caption}
+\captionsetup[table]{font={stretch=1.05, normalfont}}   %% change table caption spacing
+\captionsetup[figure]{font={stretch=1.05, normalfont}} %% change figure caption spacing
+\usepackage{titlesec}
+\titleformat{\section}
+ {\normalfont\fontsize{14}{15}\bfseries}{\thesection}{1em}{} %change the size of section header font
+\titleformat{\subsection}
+ {\normalfont\fontsize{12}{15}\bfseries}{\thesubsection}{1em}{} %change the size of subsection header font
+\renewcommand{\thesection}{} %remove the section numbers
+\renewcommand{\thesubsection}{} %remove subsection numbers
+
+%try to deal with the problem of too long figure caption
+%\DeclareCaptionLabelFormat{adja-page}{\hrulefill\\#1 #2 \emph{(previous page)}}}
+%\usepackage{subfig}
+
+%try to deal with issue of figures going to the end of the document
+%\makeatletter
+%\AtBeginDocument{%
+ %\expandafter\renewcommand\expandafter\subsection\expandafter{%
+ % \expandafter\@fb@secFB\subsection
+ %}
+%}
+\makeatother
+
+\geometry{margin = 1in}
+\pagestyle{fancy}
+\fancyhf{}
+%set the header
+\rhead{\thepage}
+\lhead{\textit{O. coloradensis} population dynamics}
+%set the line spacing
+\renewcommand{\baselinestretch}{2}
+%add line numbers
+\usepackage{lineno}
+\linenumbers
+
+%% Begin the document! 
+\begin{document}
+
+\begin{flushleft}
+\textbf{Negative density dependence promotes persistence of a globally rare yet locally abundant plant species \textit{(Oenothera coloradensis)}}
+
+\normalsize{Alice E. Stears$^{1*}$, Bonnie Heidel$^2$, Maria Paniw$^3$, Roberto Salguero-Gómez$^4$, Daniel C. Laughlin$^1$}
+
+\small{$^1$Botany Department and Program in Ecology, University of Wyoming, Laramie, WY; \linebreak
+$^2$Wyoming Natural Diversity Database, University of Wyoming, Laramie, WY; \linebreak
+$^3$Estación Biológica de Doñana, Sevilla, Spain; \linebreak
+$^4$Department of Zoology, University of Oxford, Oxford, OX2 6LD, United Kingdom}\linebreak
+\small{$^*$Corresponding Author: astears@uwyo.edu}
+
+\textbf{Acknowledgements}: Funding for this project was provided by the Wyoming Native Plant Society Markow Grant, and the U.S. Fish and Wildlife Service (USFWS) through a grant to the Wyoming Natural Diversity Database and the University of Wyoming Botany Department (grant \#14AC00827). Collection of seeds for germination experiments was conducted under USFWS Permit \#TE085324-2. Data at Soapstone Prairie were collected under permits \#1082-2018 (2018), \#1166-2019 (2019), and \#4919647-26 (2020). Data collection at F.E. Warren Air Force Base was conducted with permission and assistance from Alex Schubert, USFWS Fish and Wildlife Biologist. 
+
+\textbf{Author Contributions}: Alice Stears, Daniel Laughlin, and Bonnie Heidel contributed to study conception and design and collected demographic data. Analysis was performed by Alice Stears with contributions from Daniel Laughlin, Maria Paniw and Roberto Salguero-Gómez. Alice Stears wrote the manuscript with contributions from all authors. 
+
+\textbf{Data Availability Statement}: All data that has not previously been published will be available from Zenodo. All code will be available to download from a public GitHub repository and archived on Zenodo.
+
+\textbf{Conflict of Interest Statement}: The authors declare no conflict of interest. 
+
+\end{flushleft}
+\end{document}
