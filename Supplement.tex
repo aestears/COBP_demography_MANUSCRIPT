@@ -83,8 +83,7 @@
 
 \end{flushleft}
 
-
-\section*{Supplementary Materials}
+\section*{Supporting Information}
 \normalfont
 \subsection{Species Information}
 \textit{Oenothera coloradensis} seeds are contained within small, indehiscent capsules that contain 2-5 seeds each \cite{Burgess2005CapsuleColoradensis}. A single adult individual can produce $>$500 capsules. This species does not reproduce vegetatively, although seeds typically germinate near the base of the parent plant, which often results in dense patches of vegetative individuals \cite{Heidel202133-YearWyoming}. \textit{O. coloradensis} is pollinated primarily by hawkmoths (Krakos, pers. comm. to B. Heidel, 2013). Seed dispersers are unknown \cite{Floyd1998, Heidel202133-YearWyoming}. Previous work established that \textit{O. coloradensis} population growth rate is particularly impacted by recruitment of seedlings \cite{Floyd1998}. Recruitment increases when non-\textit{O. coloradensis} community biomass is removed, indicating that surrounding grasses and forbs outcompete or shade-out seedlings \cite{Munk2002RosetteSpecies}.
@@ -95,14 +94,8 @@
 
 The Wyoming Natural Diversity Database (WYNDD) began a base-wide census of reproductive individuals in the FEWAFB population in 1986, and has repeated this census annually since 1988 \cite{Heidel202133-YearWyoming}. The first estimate of species size after its full geographic range was identified occurred in 1998, when it was approximated that the entire species consisted of 47,300 to 50,300 reproductive individuals \cite{Fertig2000-ow}.
 
-\subsection{Seed Production Estimation}
-It was not possible to measure seed production exactly because O. coloradensis seeds are contained in indehiscent capsules. Additionally, buds on the same individual flower and set seed with a time lag of up to several weeks, so mature seed capsules often exist at the tip of a stem while un-opened buds lower down on that same stem have not yet flowered. This lag makes it difficult to count the total number of capsules produced by an individual. However, seed capsules leave a noticeable scar on the stem, so we used the number of seed capsule scars on reproductive stems as an estimate of capsule production. Counting scars is extremely time-intensive since a single plant can produce several hundred capsules, so we used Poisson generalized linear regression to estimate the relationship between the length of stem bearing capsule scars and the number of capsules produced by that stem. A Poisson regression model fit to stem measurements and capsule counts from 106 individuals in 2018 indicated that the number of capsules produced by an individual (C) can be predicted by $e^{(1.843 + 0.119\text{\textsf{x}}\text{S}))}$, where S is the stem length in cm (pseudo $R^2$ = 0.42, P $<$  0.01, Residual deviance = 186.98, df = 104) (Fig. \ref{fig:seedRegression}). We used this relationship to estimate capsule production for each reproductive individual. Previous work indicated that each capsule contained an average of 4 seeds, so we multiplied the estimated number of capsules produced by an adult plant by 4 to estimate seed production \cite{Burgess2005CapsuleColoradensis}.
-
-\subsection{Discrete Vital Rate Parameters}
+\subsection{Discrete Vital Rate Parameter Estimation}
  Previously-published data from a greenhouse experiment using \textit{O. coloradensis} seed capsules collected from the FEWAFB populations determined that viable seeds had an average germination rate of 20.3\% after cold-stratification, and did not identify a consistent decline in germination rate over five years \cite{Burgess2005CapsuleColoradensis}. This study also found that 58.5\% of seeds produced were viable. We conducted an additional seed study to determine if overwintering in natural conditions lead to a lower germination rate than was identified in the previous greenhouse study. We buried 60 field-collected seed capsules in mesh bags at 6 locations near our demographic study plots at FEWAFB, and then recovered the seed bags after one winter. An average of 10\% of seed capsules were not recoverable, likely because they were non-viable and withered away or were eaten. We planted the recovered capsules in standard greenhouse conditions, and found a mean germination rate of 6.8\%. This germination rate was much lower than that identified by Burgess et al., however our seed study had a much smaller sample size, reducing the reliability of our result \cite{Burgess2005CapsuleColoradensis}. However, it is still likely that true germination rates are much lower than those identified in greenhouse conditions, so we reduced the germination rate identified by Burgess et al. by 20\%. 
-
-\subsection{Seedling Data}
-Although seedlings (above-ground plants $<$ 3 cm in leaf length) were only tallied in each plot quadrant and year instead of tagged and measured, we incorporated them into the dataset for continuous, above-ground plants by assigning them a random size drawn from a continuous, uniform probability distribution (seedling size $\sim U($0.1, 3)). Each new recruit to the $>$ 3 cm stage in year $t+1$ was randomly assigned to a seedling within the same plot quadrant in year $t$. Seedlings in year $t$ that were assigned a recruit in year $t+1$ survived, while those without an assigned recruit died. Incorporating seedlings into the continuous dataset in this fashion allowed us to create IPMs using only one discrete stage.
 
 \begin{table}[h!]
 \centering
@@ -362,36 +355,6 @@ Site & Subpopulation & Plot Name & N \:\:\:\: Coord. & W  \:\:\:\:\:\:\:\: Coord
          & Recruit size  &  $c_o(z') = N(\mu_r, \sigma_r)$; $\mu_r = 0.24$; $\sigma_r = 0.78$ \\
          \end{longtable}
 \end{spacing}
-
-\begin{table}[h!]
-\centering
-\begin{spacing}{1.2}
-\caption{ \internallinenumbers Comparison of vital rate models with and without density dependence. The “DI” and “DD” rows contain AIC values for each vital rate model in each subpopulation for models that are density-independent (DI) and density-dependent (DD). The difference between the AIC of DI and DD models is shown in the $\Delta$AIC column. Bold text indicates that the $|\Delta|$AIC value is $>$ 3, which means that including a term for density dependence substantially changed that vital rate model. A positive $|\Delta|$AIC indicates that including density dependence improved the model, while a negative value indicates that including density dependence made model fit worse. AIC values for DI and DD values can be found in Table S3. \label{Table:DDModResults_complete}}
-\begin{tabular}{l l p{.08\textwidth} p{.1\textwidth} p{.1\textwidth}ccc}
-\toprule
-\multicolumn{2}{c}{Vital Rate Model} & \multicolumn{6}{c}{Subpopulation} 
-\\ \cline{3-8}
-& & Crow Creek & Diamond Creek & Unnamed Creek & HQ5 & HQ3 & Meadow \\ 
-\hline
-\rowcolor[gray]{.95} Survival & DI &     776.58 &  1012.68 & 2684.34 & 3242.63 & 716.66 & 166.13 \\
-\rowcolor[gray]{.95} & DD &              757.84 &  905.39  & 26848.74 & 2922.91 & 637.84 & 166.83 \\ 
-\rowcolor[gray]{.95} & $\Delta$AIC &     \textbf{18.74} &   \textbf{107.28} &  -0.41 &   \textbf{320.33} &  \textbf{78.82} &   -0.70 \\ 
-Growth & DI &                            510.34 &  953.29 &  1098.95 & 1570.93 & 300.18 & 116.54 \\
-& DD &                                   506.61 &  931.15 &  1068.14 & 1112.78 & 269.73 & 113.88 \\
-& $\Delta$AIC &                          \textbf{3.73} &    \textbf{22.15} &   \textbf{30.811} &  \textbf{458.15} &  \textbf{30.45} &  2.66 \\
-\rowcolor[gray]{.95} Flowering & DI &    371.68 &  523.30 &  1087.93 & 538.52 &  191.46 & 104.24 \\
-\rowcolor[gray]{.95} & DD &              373.31 &  523.74  & 1087.48 & 483.99 &  193.22 & 106.96 \\
-\rowcolor[gray]{.95} & $\Delta$AIC &     -1.63 &   -0.44 &   0.45 &    \textbf{54.52} &   -1.76 &  -1.72 \\
-Seed production & DI &                   842.00 &  1580.85 & 2815.89 & 1423.02 & 598.75 & 280.09 \\
-& DD &                                   835.59 &  1566.83 & 2817.19 & 1419.32 & 594.63 & 281.45 \\
- & $\Delta$AIC &                         \textbf{6.41} &    \textbf{14.02} &   -1.29 &   \textbf{3.71} &    \textbf{4.12} &   -1.35 \\ 
-\rowcolor[gray]{.95} Recruit size & DI & 921.31 &  1028.23 & 3378.43 & 4629.87 & 967.83 & 173.03 \\
-\rowcolor[gray]{.95} & DD &              923.24 &  1026.63 & 3380.53 & 4631.84 & 969.06 & 175.02 \\ 
-\rowcolor[gray]{.95} & $\Delta$AIC &     -1.93 &   1.61 &   -1.93 &   -1.97 &   -1.23 &  -1.99 \\
-\hline
-\end{tabular}
-\end{spacing}
-\end{table}
 
 \bibliography{references}
 \end{document}
