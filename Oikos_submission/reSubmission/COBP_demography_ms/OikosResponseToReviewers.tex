@@ -1,0 +1,236 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+%\usepackage{natbib}
+\usepackage{indentfirst} % to indent the first paragraph after a section heading\
+\usepackage{tabularray}
+\usepackage{xcolor}
+
+\usepackage{apacite}
+\bibliographystyle{apacite-copy}
+%\setcitestyle{aysep={,}} % separate author name and year with a comma
+\renewcommand{\BRetrievedFrom}{" "}
+\renewcommand{\BRetrieved}{" "}
+\renewcommand{\doiprefix}{https://doi.org/}
+\AtBeginEnvironment{thebibliography}{\linespread{1.5}\selectfont} % make bibliography single-spaced
+
+% new command to make a better type of column
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\usepackage{booktabs, tabularx, longtable}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{graphicx} 
+\usepackage[section]{placeins}
+\usepackage{amsmath}
+\usepackage[leftcaption]{sidecap}
+\graphicspath{ {./figures/} }
+\usepackage{setspace}
+\usepackage{longtable}
+\renewcommand\arraystretch{1.0}
+\usepackage{multirow}
+
+\usepackage{caption}
+\captionsetup[table]{font={stretch=1.05, normalfont}}   %% change table caption spacing
+\captionsetup[figure]{font={stretch=1.05, normalfont}} %% change figure caption spacing
+\usepackage{titlesec}
+\titleformat{\section}
+ {\normalfont\fontsize{14}{15}\bfseries}{\thesection}{1em}{} %change the size of section header font
+\titleformat{\subsection}
+ {\normalfont\fontsize{12}{15}\bfseries}{\thesubsection}{1em}{} %change the size of subsection header font
+\renewcommand{\thesection}{} %remove the section numbers
+\renewcommand{\thesubsection}{} %remove subsection numbers
+
+\makeatother
+
+\geometry{margin = 1in}
+\pagestyle{fancy}
+\fancyhf{}
+%set the header
+\rhead{\thepage}
+\lhead{\textit{O. coloradensis} population dynamics}
+%set the line spacing
+\renewcommand{\baselinestretch}{2}
+%add line numbers
+\usepackage{lineno}
+\linenumbers
+
+%% Begin the document! 
+\begin{document}
+
+\textbf{Comments from Reviewer 1}
+
+Thank you for your thoughtful review of our manuscript. We have made changes throughout the text that address you comments. Particularly, we 
+"This study aims to detect the presence of up to 5 mechanisms of persistence for rare species in Oenothera coloradensis.
+
+The authors have undertaken an impressive modeling effort. Backed by thorough field data collection.
+The introduction is very well written. I love the setup and I really appreciate Figure 1. It also seems like an ideal model system, a naturally rare species with a long history of monitoring, multiple populations, and multiple subpopulations. But Figure 1 also has some foreshadowing, that the data weren't going to be sufficient to fully address all these mechanisms.
+
+In the methods, the population modeling was well-described. The authors are very effective communicators. Here also, I appreciate the tables and figures laying out the full scope of the modeling effort. But, reading the methods had me a little disappointed when it came to testing the actual persistence mechanisms. NDD is the only mechanism that observational field data alone can easily detect. It wasn't really surprising that it was the only mechanism detected, given all the caveats applied to the others.
+For the other mechanisms, the authors rely heavily on parameter estimates from the literature, and/or make very conservative assumptions about their distributions.
+It would be interesting to see a more thorough exploration of the uncertainty in other parameters and show if it changes the implications.
+In particular, demographic compensation. A census has occurred since 1988? Would it be possible to extrapolate the estimated parameters to additional years, so you have sufficient data to actually include precipitation and mean winter temperature (and perhaps the other environmental parameters you mention)?
+
+Given the scope, the discussion is underwhelming. In the abstract you "propose that high population abundance in micro-site abundances within a spatially heterogeneous environment enables this species to persist" - that is interesting, but you basically just restate it in the discussion. You only mention community structure in passing, but it could very likely be affecting your ability to detect mechanisms of coexistence, or even change your expectations. How do you think it interacts with high micro-site abundances of the focal species? Does the focal species have a temporal/environmental specialization that allows it to reach high micro-site abundances when other species don't?
+Likewise, the seedbank comparison is excellent, and you have a in-system example of how not accounting for the seedbank can affect monitoring conclusions. How did/could that affect management?
+It would also be relevant to see a discussion about how the difficulty in detecting some of these parameters as part of a field study makes these mechanisms difficult to detect and mostly theoretical in many managed systems."
+
+\textbf{Comments from Reviewer 2}
+
+In this article, five mechanisms of persistence for rare species are evaluated in Oenothera coloradensis. They tested for evidence of negative density dependence, demographic compensation, vital rate buffering, asynchronous responses of subpopulations, and source-sink dynamics as mechanisms of persistence for O. coloradensis. Of the 5 mechanisms, there was only evidence for negative density dependence operating at the subpopulation scale, as including the previous year’s population size improved model fit. This study is an important contribution to demographic studies because it looks for evidence for five mechanisms of persistence in a rare species which are rarely tested altogether; most studies test one or a few of these mechanisms. While we (this review was written by 2 people) think that the ideas are novel and valuable, we have a few broader concerns and some minor comments.
+
+Major comments:
+The framing and writing of the manuscript are well done, and the diagrams illustrating the persistence strategies life history of the species were very helpful. However, the manuscript itself is too long. A considerable amount of information in the methods section should be either shortened or moved to a supplemental methods section, as they were not imperative for the reader’s understanding of the models. Specifically, the author should consider moving the section on environmental measurements, as well as some of the information on fitting vital rate models. The equations and table of mathematical terms, while interesting from a population biology viewpoint, were not critical to the reader’s understanding of the manuscript and could be moved to supplemental methods. Similarly, the table of IPM models could be more succinctly described in text and does not need to be included in the main text. Figures 3 and 4 seem unimportant to the objectives of the study and could also be moved to the supplemental section. See additional suggestions below for more suggestions on topics to move to the Supplemental methods.
+
+The testing for the importance of including a seed bank, which was again very interesting, also did not seem related to the main purpose of the study, which was to test the five persistence mechanisms. It does seem possible that seed banks could be another mechanism for persistence of this rare species, serving as a reservoir of genetic diversity for populations to lean on in the face of demographic stochasticity. If seedbanks are not a mechanism of persistence, I would recommend moving information about testing for whether it should be included in supplemental methods.
+
+Additionally, as the author was unable to directly test for evidence of fine-scale source-sink dynamics, it seems misleading to include it as a separate hypothesis. The author should consider co-opting it as a sub-hypothesis of spatial asynchrony or omit mentioning it altogether.
+
+The test for temporal demographic compensation was conducted over only three years. Surely the short timescale limits your ability to find demographic compensation. I think this fact deserves a mention or perhaps a paragraph in the discussion. In addition, the author’s test for demographic compensation specifically tests for negative correlations, but in Villelas et al. 2015, evidence for demographic compensation is considered by having fewer positive or more negative correlations than expected by chance. It is unclear why both directional hypotheses are not considered.
+
+All said, the manuscript was well written, but could be shortened considerably.
+
+\begin{flushleft}
+\textbf{Line-comments from Reviewer 1: }
+
+Minor:
+
+What is the mode of dispersal? Can you mention it in the methods?
+
+\textit{L121-123: This information was previously in the Supplement, be we relocated to the main text. }
+
+Line 324: "we use ”” to refer to population growth rate" - missing lambda
+
+\textit{L326: We corrected this error so that $\lambda$ is shown correctly.}
+
+Figure 3: C is the discrete vital rate with boxplots, not B
+
+\textit{L447: We corrected this caption to read A \& C.}
+
+\textbf{Line-comments from Reviewer 2: }
+
+L 21-22: Wording unclear. How does this mechanism explain the role of negative density dependence in the persistence of this species?
+
+\textit{L21-22: We agree that this wording was confusing, and changed the sentence to read "We propose that high micro-site abundances within a spatially heterogeneous environment enables this species to persist..."}
+
+L 63-64: It may be helpful for readers if you further explain how negative-density dependence can help rare populations to the extent that you did for the other mechanisms.
+
+\textit{L64-65: We added "decreasing the likelihood of extirpation due to low population size" to the end of this sentence to clarify the importance of this mechanism.}
+
+L 72: Consider revising from “gene flow” to “exchange of individuals”, since both the numbers and genetic diversity of populations are bolstered.
+
+\textit{L74: We added "decreasing the changed "gene flow" to "exchange of individuals."}
+
+L 95: It is unclear why having higher predicted population growth rates through the inclusion of a seedbank would necessarily mean that seedbanks are important. Would it be better to say that including a seedbank would change estimates of $\lambda$, indicating that seedbanks play an important role in the life history of this species?
+
+\textit{A higher population growth rate typically translates to higher probability of population persistence. If including a seedbank in population models leads to an increase in the model-determined population growth rate compared to models without a seedbank, we infer that the seedbank contributes positively to the persistence outlook for that species and is thus "important" for that species' natural history and long-term persistence. To clarify this point, we revised the sentence in L97-99 to read "We predicted that including a discrete seed bank state in IPMs would increase the $\lambda$ for \textit{O. coloradensis} populations, demonstrating that seed banks contribute to their long-term persistence."  }
+
+L 96-108: The justification for exploring spatial asynchrony, source-sink dynamics, and negative density dependence is clear, but why test the other two mechanisms (demographic compensation and vital rate buffering) if they are unlikely to be occurring for this species? More justification could be helpful here.
+
+\textit{These five strategies are the primary strategies for rare species persistence that have been suggested in the literature, so we tested them all as best as we were able in order to provide as complete a picture as possible of the persistence strategies of this species. 
+Further, the text in this section is merely outlining our hypotheses, not data or results. Our analysis would be incomplete if we chose to exclude analyses testing potential mechanisms of persistence because we hypothesized they may prove to be insignificant in this case. We added the following text to clarify that we were interested in testing the entire ensemble of persistence mechanisms: L111-114: "This objective contributes to our understanding of this specific species' natural history, but also enhances our collective understanding of persistence strategies in rare species."}
+
+L 109-110: I appreciate the diagram here! A couple of small comments would be that the diagram for demographic compensation should be simplified; perhaps instead of representing correlations using a matrix, use a simple line graph showing how the value of two vital rates may differ along environmental gradients. These are just suggestions, not demands.
+
+\textit{We're glad you find the diagram helpful! Although we appreciate your suggestion, we chose to keep the format of the "demographic compensation" panel as it was, since it mirrors how the results are shown. }
+
+L 118: Are there some biennial individuals? Do you expect they would have any effect on population growth? 
+
+\textit{There is a moderate proportion of individuals that are biennial (19.5\% of the individuals we monitored that were recruited in 2018 were biennial). They certainly contribute to population growth, but based on our population models, whether or not an individual flowers -- which is not strongly influenced by age beyond the first year-- is much more important for driving population growth that surviving and growing larger in the next year. }
+
+L 173: Was this counting of seed capsule scars done at the end of the growing season/after all capsules had fallen off?
+
+\textit{Yes, we conducted counts of seed capsule bud scars after the capsules had fallen off at the end of the season. We adjusted the text in L 181-183 to make this clear: "However, seed capsules leave a noticeable scar on the stem after they fall, so we used the number of seed capsule scars present on reproductive stems as an estimate of capsule production."}
+
+L 185: Since the methods are fairly long, it might be appropriate to move the “Environmental Measurements” section to the supplemental methods section.
+
+\textit{L 198-216: We shortened the Environmental Measurement section considerably. We did not completely remove this section, since these measurements were important for testing two of the five persistence mechanisms. }
+
+L 207-209: The information about the quadratic term could also be moved to a supplemental methods section.
+
+\textit{We chose to keep this wording, because we feel its inclusion in the main text is important to justify the model terms we chose to include. We did, however, remove details of the global models to the supplement, which removed text overall from this section.  }
+
+L217-218: Why not just include whether an individual has flowered as a predictor in the survival model? Does excluding flowering individuals improve model fit?
+
+\textit{The approach we took of removing data for flowering individuals from survival models is the commonly accepted practice in population models for monocarpic perennials \cite{Ellner2016Data-drivenPopulations, Merow2014AdvancingGuide}. The IPM structure does not allow flowering individuals to survive to the next year, so the model that it uses to predict survival of non-flowering individuals should be fit only to data for non-flowering individuals.}
+
+L 215-230: This information could go into the supplemental methods section.
+
+\textit{We removed text from L 230-256, and put it in the "Vital Rate Models" section of the supplementary information. }
+
+L 242-251: This information could also be moved to the supplemental methods section.
+
+ \textit{We chose to keep this section in the main text, because it describes a process that we undertook to transform data, which we think is important to emphasize so as not to misrepresent our data and models. Additionally, the process described in this section is one we think may be useful for others trying to build structured population models using data that was collected in a similar manner (which is common in population monitoring studies).}
+ 
+L 252-260: I can see that seed banks/germination were alluded to earlier in the script (L 212-214); can the information in L 252-260 about how seed germination/viability were measured be moved up to L 212 and shortened? Alluding to these rates earlier in the script without explaining where they came from led to some confusion.
+
+\textit{We added two sentences earlier in the methods section describing the seed data we collected (L193-196), which we hope will clarify the models described later. We slightly shortened the discrete vital rate section, but did not want to remove too much text because the seedbank model is an important component of our study, and there are few examples in the literature where the mechanics of incorporating seed banks into IPMs are thoroughly explained. }
+
+Figure 2: While a diagram of life history is very helpful and appreciated, it could be simplified by removing the mathematical notation, which feels unnecessary to the reader’s understanding of the life history of this species.
+
+\textit{We understand that the longer explanations of the vital rate symbology in this figure may distract from the reader's understanding of the \textit{O. coloradensis} life cycle, which is the primary objective of this figure. However, we chose to leave the names of the vital rates (i.e. b(z), goCont, etc.) so that the reader can use this diagram as a visual aide in understanding how the IPM was constructed. We made it clear in the figure caption that the meaning of each vital rate symbol is included in Table 1. }
+
+Table 1: This information could be moved to a supplementary method section, along with equations 1 and 2, which seem unnecessary to the reader’s understanding of your methods.
+
+\textit{We chose to keep this Table and equations 1 and 2 in the main text, because the model structure of the IPMs we built are important for understanding our analyses. We also feel that it would be difficult for the reader to track the vital rate models we mention throughout the text without a tabular representation and explanation of those models.   }
+
+Table 2: This information could be moved to a supplemental methods section.
+
+\textit{Our analyses required us to fit many different vital rate models and IPMs, and we feel that it is important to provide the reader with a clear representation of the different models and the data and covariates they include. Without this information, the reader would not be able to understand the subsequent analyses we conducted, so we think it is important to keep in the main text. While we could translate the information to text, we think that it is much easier to interpret in table form. }
+
+L 286-299: This information could be moved to a supplemental methods section.
+
+\textit{We shortened this section to a single sentence that references table 1, and refers the reader to a new section in the supplement that contains more information about the vital rate functions used in the IPMs. }
+
+L 345. As near as I can tell, this approach differs from that of Villellas et al because it uses environmental covariates from the vital rate functions, not the vital rates (i.e., elements in the kernel) themselves. But the randomization procedure you used is not clear; I guess you sampled from the distribution of the estimated coefficient estimates themselves to obtain the null distribution, but then said if the (mean) estimated coefficient was more negatively correlated than this null distribution, then that indicated demographic compensation? That doesn’t seem right. I think more clarity is needed.
+
+\textit{We weren't able to exactly replicate the analysis described in \cite{Villellas2015DemographicImplications}, because we used an IPM rather than a matrix model, which for the most part has vital rate functions rather than discrete vital rate values. It's not possible to calculate the correlation across vital rate functions, so we used an approach similar to that described in \cite{Dibner2019}. Demographic compensation means that there are opposing (i.e. negatively correlated) responses of vital rates to environmental variation, which would be reflected by opposing (or negatively correlated) effect size of an environmental covariate across vital rate functions. We altered the text in L 376-77 to clarify that the approach we used was an adaptation of the approaches used in both Villellas et al. and Dibner et al. }
+
+L 324—I think you have a lambda term missing here. It is not visible on the pdf.
+
+\textit{Thank you for noting this omission. We added the missing lambda symbol into the text.}
+
+L 359: What sort of correlations were used in this test?
+
+\textit{We used Pearson correlations, and added this to line 379 in the text to make this clear. }
+
+427-432: It remains unclear why having a greater asymptotic population growth rate via the inclusion of a seedbank stage is necessarily more accurate.
+
+\textit{We are unsure which section of text this comment refers to, since there is no mention of seed banks from line 427-432 in the submitted text. However, we have made it more clear throughout the text that a larger asymptotic growth rate resulting from models 
+that do include seed banks as opposed to those that do not indicates that a seed bank contributes to long-term population growth of this species ( e.g in L589-591).}
+
+Figure 4: This figure could be moved to a supplemental figures section.
+
+\textit{ We agree that this is not essential, and so moved this figure to the supporting material (Figure S3).}
+
+Figure 5:  This figure does not seem like the most helpful way of representing evidence for negative density dependence. Perhaps a table of the slopes of relationships between $\lambda$ and Nt, as well as Nt+1/Nt and Nt, would be simpler?
+
+\textit{We appreciate the feedback, but feel that a visual representation of this information is more intuitive than a table, and more clearly illustrates the negative relationship between population size and growth rate that constitutes evidence for negative density dependence. However, we clarified the text in the figure caption to increase the clarity of this figure. }
+
+L 526-539: It would be helpful for readers if abbreviations used in the figure are explained in the figure caption.
+
+\textit{We added text in the figure caption to clarify that the abbreviations refer to vital rates, and that those vital rates are explained further in Table 1 of the main text.  }
+
+L 587-612: Consider splitting this paragraph into two separate paragraphs, first discussing the mechanisms which there was no support for, then discussing negative density dependence.
+
+\textit{Thank you for this suggestion. We broke this paragraph into two at L 620.}
+ 
+L 615-618: The few number of growing seasons used to parameterize these models should be emphasized as a caveat, specifically for why it would be difficult to find evidence for demographic compensation.
+
+\textit{We added additional text in L 637 to emphasize that more years of data would potentially reveal evidence for more persistence mechanisms.}
+
+L 620-622: Is there evidence for this in your experience monitoring this species? Is this species locally abundant?
+
+\textit{Yes, in L 640 we state that this species "often grows at high local density." This has been observed in the field by us, as well as others monitoring this species \cite{Heidel202133-YearWyoming}. We altered the text in L 640 to emphasize that we have personally observed this phenomenon. }
+
+Figure S1: This figure might be more helpful in the main text, as understanding the proximity of subpopulations seems important to the reader’s understanding of spatial asynchrony.
+
+\textit{We moved this figure to the main text, and it is now figure 2 there.}
+
+\end{flushleft}
+
+\bibliography{references}
+\end{document}
